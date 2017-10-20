@@ -25,13 +25,15 @@ public:
 
     int isEmpty();
 
-    HeapNode* extractMin();
+    HeapNode *extractMin();
 
     void decreaseKey(int v, int dist);
 
     bool isInMinHeap(int v);
 
-    void printArray(int dist[], int n);
+    void printArray(int dist[], int n, std::vector<int> parent);
+
+    void printPath(std::vector<int> parent, int i);
 };
 
 

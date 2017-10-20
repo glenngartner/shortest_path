@@ -108,9 +108,20 @@ bool MinimumHeap::isInMinHeap(int v) {
     }
 }
 
-void MinimumHeap::printArray(int *dist, int n) {
-    printf("Vertex   Distance from Source\n");
+void MinimumHeap::printArray(int *dist, int n, std::vector<int> parent) {
+    int src = 0;
+    printf("Vertex\t Distance\t Path\n");
     for (int i = 0; i < n; ++i){
-        printf("%d \t\t %d\n", i, dist[i]);
+        printf("\n%d->%d \t\t %d\t\t %d ", src, i, dist[i], src);
+        this->printPath(parent, i);
+    }
+}
+
+void MinimumHeap::printPath(std::vector<int> parent, int i){
+    if (parent[i] == -1){
+        return;
+    } else {
+        this->printPath(parent, parent[i]);
+        printf("%d ", i);
     }
 }
