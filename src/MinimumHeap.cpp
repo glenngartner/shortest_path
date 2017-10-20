@@ -11,7 +11,7 @@ MinimumHeap::MinimumHeap(int capacity) {
     this->size = 0;
     this->capacity = capacity;
     // TODO refactor to use vector of shared_ptr<HeapNode> instead of malloc
-    this->array = (HeapNode **) malloc(capacity * sizeof(struct HeapNode *));
+    this->array = (HeapNode **) malloc(capacity * sizeof(HeapNode *));
 }
 
 // TODO refactor to use std::shared_ptr<HeapNode>
@@ -58,7 +58,7 @@ int MinimumHeap::isEmpty() {
 HeapNode *MinimumHeap::extractMin() {
 
     if (this->isEmpty())
-        return NULL;
+        return nullptr;
 
     // Store the root node
     HeapNode* root = this->array[0];

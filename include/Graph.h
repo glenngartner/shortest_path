@@ -15,7 +15,7 @@ public:
     int numOfVertices;
     std::vector<std::shared_ptr<AdjacencyList>> arrayOfLists;
 
-    void addEdge(std::shared_ptr<Graph> graph, int src, int destination, int weight);
+    void addEdge(int src, int destination, int weight);
 };
 
 

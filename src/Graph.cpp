@@ -14,15 +14,15 @@ Graph::Graph(int numberOfVertices) {
     }
 }
 
-void Graph::addEdge(std::shared_ptr<Graph> graph, int src, int destination, int weight) {
+void Graph::addEdge(int src, int destination, int weight) {
     // create a new node
     std::shared_ptr<Node> newNode = std::make_shared<Node>(destination, weight);
     // assign the next value of the new node the value of head from the source list vector
-    newNode->next = graph->arrayOfLists[src]->head;
-    graph->arrayOfLists[src]->head = newNode;
+    newNode->next = this->arrayOfLists[src]->head;
+    this->arrayOfLists[src]->head = newNode;
 
     // since the graph is undirected, add an edge from the dest to the src also
     std::shared_ptr<Node> newNode2 = std::make_shared<Node>(src, weight);
-    newNode2->next = graph->arrayOfLists[destination]->head;
-    graph->arrayOfLists[destination]->head = newNode2;
+    newNode2->next = this->arrayOfLists[destination]->head;
+    this->arrayOfLists[destination]->head = newNode2;
 }
