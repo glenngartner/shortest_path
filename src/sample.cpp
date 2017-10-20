@@ -6,6 +6,7 @@
 // list representation of graph
 
 #include <iostream>
+#include <limits.h>
 #include <memory>
 #include "../include/Graph.h"
 
