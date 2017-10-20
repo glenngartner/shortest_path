@@ -4,7 +4,6 @@
 
 #include <memory>
 #include "../include/MinimumHeap.h"
-#include "../include/HeapNode.h"
 
 MinimumHeap::MinimumHeap(int capacity) {
     this->pos = (int *) malloc(capacity * sizeof(int));
@@ -110,7 +109,7 @@ bool MinimumHeap::isInMinHeap(int v) {
 }
 
 void MinimumHeap::printArray(int *dist, int n) {
-    printf("Vertex    Distance from Source\n");
+    printf("Vertex   Distance from Source\n");
     for (int i = 0; i < n; ++i){
         printf("%d \t\t %d\n", i, dist[i]);
     }
