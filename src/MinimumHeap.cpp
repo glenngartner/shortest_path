@@ -3,6 +3,7 @@
 //
 
 #include <memory>
+#include <cstdlib>
 #include "../include/MinimumHeap.h"
 
 MinimumHeap::MinimumHeap(int capacity) {
