@@ -12,7 +12,6 @@ void Dijkstra::generate(std::shared_ptr<Graph> graph, int src) {
     int dist[V];      // dist values used to pick minimum weight edge in cut
 
     // parent array to store shortest path tree
-//    int parent[V];
     std::vector<int> parent(V);
 
     // minHeap represents set E
@@ -28,7 +27,7 @@ void Dijkstra::generate(std::shared_ptr<Graph> graph, int src) {
     }
 
     // Make dist value of src vertex as 0 so that it is extracted first
-    HeapNode *newHeapNode2 = new HeapNode(src, dist[src]);
+   HeapNode *newHeapNode2 = new HeapNode(src, dist[src]);
     minHeap->array[src] = newHeapNode2;
     minHeap->pos[src] = src;
     dist[src] = 0;
