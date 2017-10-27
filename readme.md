@@ -1,4 +1,4 @@
-## Custom Binary Tree Application 
+## Shortest Path Application 
 A console application implementing Dijkstra's shortest path algorithm.
 - The app uses a pre-defined set of nodes. The graph is sketched and stored in the assets directory. 
 - The console will output the shortest path to all nodes in the graph, using node 0 as the starting point. 
