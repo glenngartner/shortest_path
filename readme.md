@@ -32,4 +32,4 @@ Compile the project in your IDE. If you chose UNIX Makefiles during cmake config
 ``` 
 
 ### Binaries
-If you don't want to build yourself, Use the windows (.exe) and OSX (unix executable) binaries in the bin/ folder. 
+If you don't want to build yourself, use the windows (.exe), OSX, or Linux binaries in the bin/ folder to run the app. 
